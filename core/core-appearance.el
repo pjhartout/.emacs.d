@@ -48,5 +48,8 @@
 ;; Fonts
 (set-face-attribute 'default t :font "MesloLGS NF-13")
 
+;; Time and calendar format
+(display-time-mode 1)
+
 (provide 'core-appearance)
 
