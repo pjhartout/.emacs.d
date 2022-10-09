@@ -1,0 +1,39 @@
+(require 'package)
+(setq package-list
+      '(auctex-latexmk))
+
+; install the packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;; Main tex mode
+(require 'tex)
+
+;; auctex latexmk setup
+;; remove this line once
+;; https://github.com/tom-tan/auctex-latexmk/pull/40 is merged.
+(provide 'tex-buf)
+
+(require 'auctex-latexmk)
+(auctex-latexmk-setup)
+
+;; Some customizations
+(setq font-latex-fontify-script nil)
+(setq font-latex-fontify-sectioning 'color)
+(custom-set-faces
+ '(font-latex-slide-title-face ((t (:inherit font-lock-type-face)))))
+
+;; use pdflatex
+(setq TeX-PDF-mode t)
+
+;; Open pdf in preview
+(setq TeX-view-program-list
+      '(("DVI Viewer" "open %o")
+        ("PDF Viewer" "open %o")
+        ("HTML Viewer" "open %o")))
+
+(setq lsp-tex-server 'digestif)
+
+(provide 'language-latex)
+
