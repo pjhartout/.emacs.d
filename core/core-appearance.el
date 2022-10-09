@@ -45,6 +45,8 @@
 (setq all-the-icons-dired-monochrome nil)
 
 
+;; Fonts
+(set-face-attribute 'default t :font "MesloLGS NF-13")
 
 (provide 'core-appearance)
 
