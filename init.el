@@ -15,18 +15,22 @@
 (add-to-list 'load-path "~/.emacs.d/projects")
 (add-to-list 'load-path "~/.emacs.d/startup")
 
+(message "[Emacs Config] Loading core configurations.")
 ;; call core functionalities
 (require 'core-packages)
 (require 'core-appearance)
+(require 'core-editor)
 (require 'core-key-bindings)
 
-;; call specific functionalities
+(message "[Emacs Config] Loading non-core configurations.")
+;; call specific functionalities relevant for the whole editor
 (require 'search-ivy)
 (require 'projects-treemacs)
 (require 'startup)
 
 
 (message "[Emacs Config] Config is loaded up.")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
