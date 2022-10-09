@@ -12,6 +12,7 @@
 	all-the-icons-completion
 	treemacs
 	treemacs-all-the-icons
+	rainbow-mode
         ))
 
 ; install the missing packages
@@ -43,6 +44,12 @@
 (require 'all-the-icons-dired)
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (setq all-the-icons-dired-monochrome nil)
+
+;; Make rainbow-mode global
+(define-globalized-minor-mode global-rainbow-mode rainbow-mode
+  (lambda () (rainbow-mode 1)))
+
+(global-rainbow-mode 1)
 
 
 ;; Fonts

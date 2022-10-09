@@ -87,21 +87,21 @@
 
 
 ;; From Paul, copies and executes the code block in the shell
-(defun org-execute-code-in-shell  (&optional arg _info)
-  "Copy current src block's contents and execute it in code shell buffer."
-  (interactive "P")
-  (let ((this-window (selected-window))
-	(info (org-babel-get-src-block-info)))
-    (org-babel-switch-to-session arg info)
-    (end-of-buffer)
-    (yank)
-    (comint-send-input)
-    (comint-send-input)
-    (comint-send-input)
-    (select-window this-window)))
+;; (defun org-execute-code-in-shell  (&optional arg _info)
+;;   "Copy current src block's contents and execute it in code shell buffer."
+;;   (interactive "P")
+;;   (let ((this-window (selected-window))
+;; 	(info (org-babel-get-src-block-info)))
+;;     (org-babel-switch-to-session arg info)
+;;     (end-of-buffer)
+;;     (yank)
+;;     (comint-send-input)
+;;     (comint-send-input)
+;;     (comint-send-input)
+;;     (select-window this-window)))
 
 ;; Rebind keys to org-execute-code-in-shell
-(org-defkey org-mode-map "\C-c\C-c" `org-execute-code-in-shell)
-(org-defkey org-mode-map "\C-c\c" 'org-ctrl-c-ctrl-c)
+;; (org-defkey org-mode-map "\C-c\C-c" `org-execute-code-in-shell)
+;; (org-defkey org-mode-map "\C-c\c" 'org-ctrl-c-ctrl-c)
 
 (provide 'language-org)
