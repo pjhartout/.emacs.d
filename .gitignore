@@ -4,6 +4,8 @@ recentf
 savefile/
 transient/
 projectile-bookmarks.eld
+org-roam.db
+bookmarks
 
 ### Elisp ###
 # Compiled
