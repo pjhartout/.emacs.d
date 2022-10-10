@@ -93,4 +93,20 @@
 ;; (org-defkey org-mode-map "\C-c\C-c" `org-execute-code-in-shell)
 ;; (org-defkey org-mode-map "\C-c\c" 'org-ctrl-c-ctrl-c)
 
+;; Org roam setup, from the David Wilson tutorial
+(use-package org-roam
+  :ensure t
+  :init
+  (setq org-roam-v2-ack t)
+  :custom
+  (org-roam-directory "~/Documents/Git/phd_utils/org-roam")
+  (org-roam-completion-everywhere t)
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert)
+         :map org-mode-map
+         ("C-M-i" . completion-at-point))
+  :config
+  (org-roam-setup))
+
 (provide 'language-org)
