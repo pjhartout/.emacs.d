@@ -6,6 +6,7 @@ transient/
 projectile-bookmarks.eld
 org-roam.db
 bookmarks
+forge-database.sqlite
 
 ### Elisp ###
 # Compiled
