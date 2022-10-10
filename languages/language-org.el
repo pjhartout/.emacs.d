@@ -1,22 +1,10 @@
 ;; Source https://zzamboni.org/post/beautifying-org-mode-in-
 
-;; Org mode package installs
-(require 'package)
-(setq package-list
-      '(org-bullets
-	org-roam))
-
-; install the missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
-
-
-
 ;; Org mode appearance
 
 ;; use org bullets
-(require 'org-bullets)
+(use-package org-bullets
+  :ensure t)
 
 ;; hide emphasis markers
 (setq org-hide-emphasis-markers t)
