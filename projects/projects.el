@@ -42,10 +42,19 @@
   ;; NOTE: Set this to the folder where you keep your Git repos!
   (when (file-directory-p "~/Documents/Git")
     (setq projectile-project-search-path '("~/Documents/Git")))
-  (setq projectile-switch-project-action #'projectile-dired))
+  (setq projectile-switch-project-action 'projectile-dired ))
 
 (use-package counsel-projectile
   :config (counsel-projectile-mode))
+
+;; Magit configuration
+(use-package magit
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+(use-package forge)
+(setq auth-sources '("~/.authinfo"))
+
 
 (provide 'projects)
 
