@@ -13,7 +13,7 @@
 
 (global-wakatime-mode)
 ;; TODO: relative path, use environment variables
-(setq wakatime-cli-path "/Users/philiphartout/.wakatime/wakatime-cli")
+(setq wakatime-cli-path "${HOME}/.wakatime/wakatime-cli")
 
 (provide 'projects-time)
 
