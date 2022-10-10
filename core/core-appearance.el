@@ -9,7 +9,6 @@
 	all-the-icons-ivy
 	all-the-icons-ivy-rich
 	all-the-icons-gnus
-	all-the-icons-completion
 	treemacs
 	treemacs-all-the-icons
 	rainbow-mode
