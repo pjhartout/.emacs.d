@@ -27,6 +27,7 @@
 ;; call specific functionalities relevant for the whole editor
 (require 'search-ivy)
 (require 'projects-treemacs)
+(require 'projects-time)
 (require 'startup)
 
 (message "[Emacs Config] Loading language configs.")
