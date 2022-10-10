@@ -9,6 +9,9 @@
 ;; each 50MB of allocated data (the default is on every 0.76MB)
 (setq gc-cons-threshold 50000000)
 
+;; don't check signature due to rainbow-mode signature verification
+(setq package-check-signature nil)
+
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/core")
 (add-to-list 'load-path "~/.emacs.d/search")
