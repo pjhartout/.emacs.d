@@ -11,6 +11,7 @@
         counsel
         restart-emacs
 	nord-theme
+	exec-path-from-shell
         ))
 
 (setq package-archives '(("melpa" . "http://melpa.org/packages/")
@@ -29,5 +30,9 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+
+;; This sets the PATH used by the emacs config to the PATH of the terminal
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (provide 'core-packages)
