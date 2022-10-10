@@ -12,6 +12,7 @@
         restart-emacs
 	nord-theme
 	exec-path-from-shell
+	counsel-projectile
         ))
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
