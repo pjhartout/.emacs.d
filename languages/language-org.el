@@ -73,6 +73,7 @@
       '(("TODO" .  "orange") ("STARTED" . "yellow") ("TODO" . "red") ("DONE" . "green")
         ("CANCELED" . (:foreground "blue" :weight bold))))
 
+(setq org-link-file-path-type 'relative)
 
 ;; From Paul, copies and executes the code block in the shell
 ;; (defun org-execute-code-in-shell  (&optional arg _info)
