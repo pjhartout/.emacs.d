@@ -15,6 +15,7 @@
 	counsel-projectile
 	forge
 	eterm-256color
+	vterm
         ))
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
