@@ -17,6 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d/search")
 (add-to-list 'load-path "~/.emacs.d/projects")
 (add-to-list 'load-path "~/.emacs.d/startup")
+(add-to-list 'load-path "~/.emacs.d/terminal")
 (add-to-list 'load-path "~/.emacs.d/languages")
 
 (message "[Emacs Config] Loading core configurations.")
@@ -31,6 +32,7 @@
 (require 'search)
 (require 'projects)
 (require 'startup)
+(require 'terminal)
 
 (message "[Emacs Config] Loading language configs.")
 ;; call language-specific configurations
@@ -65,3 +67,4 @@
  '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
  '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
+(put 'set-goal-column 'disabled nil)
