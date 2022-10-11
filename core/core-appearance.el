@@ -12,6 +12,7 @@
 	treemacs
 	treemacs-all-the-icons
 	rainbow-mode
+        doom-modeline
         ))
 
 ; install the missing packages
@@ -50,12 +51,17 @@
 
 (global-rainbow-mode 1)
 
-
 ;; Fonts
-(set-face-attribute 'default t :font "MesloLGS NF-13")
+(set-face-attribute 'default t :font "Fira Code Retina")
 
 ;; Time and calendar format
 (display-time-mode 1)
+
+;; Better modeline
+(use-package doom-modeline
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 15)))
+
 
 (provide 'core-appearance)
 
