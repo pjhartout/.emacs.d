@@ -14,6 +14,7 @@
 	exec-path-from-shell
 	counsel-projectile
 	forge
+	eterm-256color
         ))
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
