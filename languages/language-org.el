@@ -8,7 +8,7 @@
 
 ;; hide emphasis markers
 (setq org-hide-emphasis-markers t)
-
+(setq org-pretty-entities t)
 
 ;; font lock substitutions for unordered lists.
 (font-lock-add-keywords 'org-mode
