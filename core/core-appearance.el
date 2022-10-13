@@ -62,6 +62,10 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
+;; Keep windows the same size when splitting
+(use-package balanced-windows
+  :config
+  (balanced-windows-mode))
 
 (provide 'core-appearance)
 
