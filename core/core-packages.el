@@ -15,10 +15,14 @@
 	counsel-projectile
 	forge
 	eterm-256color
-	vterm))
+	vterm
+	tablist
+	pdf-tools
+	balanced-windows))
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa.org/packages/")))
+			 ("melpa" . "http://melpa.org/packages/")
+			 ("org" . "http://orgmode.org/elpa/")))
 
 
 
