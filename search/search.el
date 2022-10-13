@@ -27,4 +27,6 @@
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
+(pdf-loader-install) ; On demand loading, leads to faster startup time
+
 (provide 'search)
