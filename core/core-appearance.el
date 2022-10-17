@@ -12,8 +12,7 @@
 	treemacs
 	treemacs-all-the-icons
 	rainbow-mode
-        doom-modeline
-        ))
+        doom-modeline))
 
 ; install the missing packages
 (dolist (package package-list)
