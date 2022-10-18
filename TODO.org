@@ -1,0 +1,9 @@
+#+TITLE: TODO items for config
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+LATEX_CLASS_OPTIONS: [12pt]
+
+Some things to improve:
+
+- Org mode appearance of code blocks
+- Migrate =*.el= files to =*.org= files safe for =init.el=
