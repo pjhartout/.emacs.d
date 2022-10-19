@@ -7,6 +7,7 @@ projectile-bookmarks.eld
 org-roam.db
 bookmarks
 forge-database.sqlite
+projectile.cache
 
 # URL directory
 url/
