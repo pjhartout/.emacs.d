@@ -8,6 +8,10 @@ org-roam.db
 bookmarks
 forge-database.sqlite
 
+# URL directory
+url/
+
+
 ### Elisp ###
 # Compiled
 *.elc
