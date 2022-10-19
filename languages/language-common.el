@@ -27,6 +27,6 @@
 (use-package which-key
     :config
     (which-key-mode)
-    (setq which-key-idle-delay 0.05))
+    (setq which-key-idle-delay 0.5))
 
 (provide 'language-common)
