@@ -6,6 +6,12 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 
+;; Let's use ivy-rich as well
+(use-package ivy-rich
+  :after ivy
+  :init
+  (ivy-rich-mode 1))
+
 ;; Key bindings
 
 (global-set-key "\C-s" 'swiper)
