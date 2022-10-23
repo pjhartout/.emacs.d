@@ -7,3 +7,6 @@ Some things to improve:
 
 - Org mode appearance of code blocks
 - Migrate =*.el= files to =*.org= files safe for =init.el=
+- TODO in lists
+- toml and yaml support
+
