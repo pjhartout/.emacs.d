@@ -36,8 +36,11 @@
 ;; Maximize on startup
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
-;; Hide menu bar
-(tool-bar-mode -1)
+;; Built-in things we want to remove
+(scroll-bar-mode -1)        ; Disable visible scrollbar
+(tool-bar-mode -1)          ; Disable the toolbar
+(tooltip-mode -1)           ; Disable tooltips
+(set-fringe-mode 10)        ; Give some breathing room
 
 ;; Icons in dired mode
 (require 'all-the-icons-dired)
