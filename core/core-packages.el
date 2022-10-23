@@ -18,7 +18,9 @@
 	vterm
 	tablist
 	pdf-tools
-	balanced-windows))
+	balanced-windows
+	yatemplate
+	wakatime-mode))
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("melpa" . "http://melpa.org/packages/")
