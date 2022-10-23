@@ -1,0 +1,27 @@
+#+BIND: org-export-use-babel nil
+#+TITLE: TITLE
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+DATE: `(format-time-string "%A %B %e, %Y")`
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:[a4paper,12pt,twoside]
+#+LaTeX_HEADER:\usepackage[final]{pdfpages}
+#+LaTeX_HEADER:\usepackage{amsfonts, amssymb}            % Math symbols
+#+LaTeX_HEADER:\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+#+LATEX_HEADER_EXTRA:\hypersetup{colorlinks=false, linkcolor=black, citecolor=black, filecolor=black, urlcolor=black}
+#+PROPERTY: header-args :exports both :session python_emacs_session :cache :results value
+#+OPTIONS: ^:nil
+#+OPTIONS: toc:nil
+#+STARTUP: latexpreview
+#+LATEX_COMPILER: pdflatexorg-mode restarted
+
+* Goals
+* Set up
+
+#+begin_src elisp :results silent
+
+(pyvenv-activate "~/path/to/venv")
+
+#+end_src
+
+    
