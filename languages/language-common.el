@@ -40,5 +40,10 @@
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 
+;; For any programming language, we enable line numbers
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+;; and also for org mode
+(add-hook 'org-mode-hook 'display-line-numbers-mode)
+
 
 (provide 'language-common)
