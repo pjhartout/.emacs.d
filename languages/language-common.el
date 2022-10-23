@@ -29,4 +29,13 @@
     (which-key-mode)
     (setq which-key-idle-delay 0.5))
 
+;; Templates
+(use-package yatemplate
+  :config
+  (yas-global-mode t)
+  (auto-insert-mode t)
+  (setq auto-insert-query nil)
+  (yatemplate-fill-alist))
+
+
 (provide 'language-common)
