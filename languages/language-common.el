@@ -37,5 +37,8 @@
   (setq auto-insert-query nil)
   (yatemplate-fill-alist))
 
+(define-key yas-minor-mode-map [(tab)] nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+
 
 (provide 'language-common)
