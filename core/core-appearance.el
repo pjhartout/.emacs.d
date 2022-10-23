@@ -21,7 +21,7 @@
 
 ;; Set the theme
 (require 'nord-theme)
-(load-theme 'nord t)
+(load-theme 'doom-palenight t)
 
 ;; Beacon mode
 (require 'beacon)
