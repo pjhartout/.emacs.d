@@ -1,4 +1,4 @@
-;; Searching in emacs
+;; We're using the ivy completion framework in emacs
 
 (require 'ivy)
 
