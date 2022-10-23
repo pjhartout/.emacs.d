@@ -43,6 +43,9 @@
 
 ;; Org mode behaviour
 
+(setq org-src-preserve-indentation nil)
+(setq org-edit-src-content-indentation 0)
+
 ;; Set refile targets
 (setq org-refile-targets '(("~/Documents/Git/org/gtd.org" :maxlevel . 3)
                            ("~/Documents/Git/org/someday.org" :maxlevel . 3)
