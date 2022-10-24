@@ -39,6 +39,7 @@
 (require 'language-common)
 (require 'language-org)
 (require 'language-latex)
+(require 'language-python)
 
 (message "[Emacs Config] Config is loaded up.")
 
