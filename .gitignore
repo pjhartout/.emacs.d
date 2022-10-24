@@ -8,6 +8,7 @@ org-roam.db
 bookmarks
 forge-database.sqlite
 projectile.cache
+.lsp-session-*
 
 # URL directory
 url/
