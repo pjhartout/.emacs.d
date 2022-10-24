@@ -44,4 +44,7 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+(require 'use-package)
+(setq use-package-always-ensure t)
+
 (provide 'core-packages)
