@@ -9,6 +9,7 @@ bookmarks
 forge-database.sqlite
 projectile.cache
 .lsp-session-*
+ac-comphist.dat
 
 # URL directory
 url/
