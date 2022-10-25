@@ -102,7 +102,7 @@
   :init
   (setq org-roam-v2-ack t)
   :custom
-  (org-roam-directory "~/Documents/Git/phd_utils/org-roam")
+  (org-roam-directory "~/org-roam")
   (org-roam-completion-everywhere t)
   (org-roam-capture-templates
    '(("d" "default" plain
