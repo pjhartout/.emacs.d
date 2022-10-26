@@ -20,7 +20,7 @@
     (package-install package)))
 
 ;; Set the theme
-(require 'nord-theme)
+(use-package doom-themes)
 (load-theme 'doom-palenight t)
 
 ;; Beacon mode
