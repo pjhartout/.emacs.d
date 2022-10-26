@@ -15,13 +15,36 @@
 #+STARTUP: latexpreview
 #+LATEX_COMPILER: pdflatexorg-mode restarted
 
-* Goals
-* Set up
+* Research Project Proposal Form
+** Title
+Keywords, precise
 
-#+begin_src elisp :results silent
+** Abstract
+The relevance of the domain. SOTA has properties, however these come
+with fundamental limitations. Limitations are addressed (be technical
+here!) and yield the following improvement (dataset & metrics). Now
+domain is extended.
 
-(pyvenv-activate "~/path/to/venv")
+Make sure experiments are fully reproducible: Github repo where each
+experiment is a separate folder where the method is copied over. One
+script to get results, one to produce the plot from the result. All
+plots must have axis labels and error bars, no tables.
 
-#+end_src
+** What is the main idea of the paper? Give 1-2 sentences.
+Change in point of view, new data... Include a technical description of the new part.
+
+** What are the main competitors of your approach? Discuss metrics.
+List and links to implementations.
+
+If the new method is the only that does x and y simultaneously,
+include comparison partners of x and y
+
+** How do you measure success?
+Performance measure, runtime, interpretability on datasets (external validation)
+
+** Why is your project relevant?
+It is the only method that can accomplish both. Both is relevant because...
+It is the 'best' method for the task. Improving the method for the task is relevant because...
+It is the only method that can do the new task. The task is relevant because...
 
     
