@@ -34,8 +34,9 @@
   :hook (company-mode . company-box-mode))
 
 ;; prescient for ranking of previously used commands
-(straight-use-package 'prescient)
-(straight-use-package 'ivy-prescient)
-(straight-use-package 'company-prescient)
+(use-package ivy-prescient
+  :after counsel
+  :config
+  (ivy-prescient-mode 1))
 
 (provide 'search)
