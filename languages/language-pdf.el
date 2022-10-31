@@ -11,6 +11,7 @@
  ;; use normal isearch
  (define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward))
 
+(pdf-loader-install) ; On demand loading, leads to faster startup time
 
 
 (provide 'language-pdf)
