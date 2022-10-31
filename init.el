@@ -40,7 +40,7 @@
 (require 'language-org)
 (require 'language-latex)
 (require 'language-python)
-(require 'language-pdf)
+(org-babel-load-file "~/.emacs.d/languages/language-pdf.org")
 
 (message "[Emacs Config] Config is loaded up.")
 

@@ -1,0 +1,31 @@
+#+TITLE: PDF Language Configuration
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+DATE: Tuesday November  1, 2022
+
+* PDF Language Configuration
+
+#+begin_src elisp
+(use-package pdf-tools
+ :config
+ ;; initialise
+ (pdf-tools-install)
+ ;; open pdfs scaled to fit page
+ (setq-default pdf-view-display-size 'fit-page)
+ ;; automatically annotate highlights
+ (setq pdf-annot-activate-created-annotations t)
+ ;; use normal isearch
+ (define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward))
+#+end_src
+
+The command below triggers on demand loading, leads to faster startup
+time.
+
+#+begin_src elisp
+(pdf-loader-install)
+#+end_src
+
+
+#+begin_src elisp
+(provide 'language-pdf)
+#+end_src
