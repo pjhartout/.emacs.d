@@ -33,6 +33,9 @@
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
-(pdf-loader-install) ; On demand loading, leads to faster startup time
+;; prescient for ranking of previously used commands
+(straight-use-package 'prescient)
+(straight-use-package 'ivy-prescient)
+(straight-use-package 'company-prescient)
 
 (provide 'search)
