@@ -92,5 +92,8 @@
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
 
+(use-package emojify
+  :hook (after-init . global-emojify-mode))
+
 (provide 'core-appearance)
 
