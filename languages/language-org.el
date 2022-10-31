@@ -60,7 +60,7 @@
         ("b" . "src bibtex")
         ("c" . "center\n")
         ("C" . "comment\n")
-        ("e" . "elisp\n")
+        ("e" . "src elisp\n")
         ("E" . "export")
         ("h" . "export html\n")
         ("l" . "export latex\n")
