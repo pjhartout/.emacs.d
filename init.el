@@ -14,7 +14,7 @@
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/core")
-(add-to-list 'load-path "~/.emacs.d/search")
+(add-to-list 'load-path "~/.emacs.d/completion")
 (add-to-list 'load-path "~/.emacs.d/projects")
 (add-to-list 'load-path "~/.emacs.d/startup")
 (add-to-list 'load-path "~/.emacs.d/terminal")
@@ -29,7 +29,7 @@
 
 (message "[Emacs Config] Loading non-core configurations.")
 ;; call specific functionalities relevant for the whole editor
-(require 'search)
+(require 'completion)
 (require 'projects)
 (require 'startup)
 (require 'terminal)

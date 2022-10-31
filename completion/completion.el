@@ -39,4 +39,12 @@
   :config
   (ivy-prescient-mode 1))
 
-(provide 'search)
+(use-package company-prescient
+  :after company
+  :config
+  (company-prescient-mode 1))
+
+;; Remember candidate frequencies across sessions
+(prescient-persist-mode 1)
+
+(provide 'completion)
