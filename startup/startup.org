@@ -1,0 +1,14 @@
+#+begin_src elisp
+
+;; Startup screen emacs
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+
+(setq dashboard-banner-logo-title "Welcome to the church of Emacs.")
+(setq dashboard-startup-banner "~/.emacs.d/emacs_logo.png")
+
+(provide 'startup)
+
+#+end_src

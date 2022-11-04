@@ -22,24 +22,24 @@
 
 (message "[Emacs Config] Loading core configurations.")
 ;; call core functionalities
-(require 'core-packages)
-(require 'core-appearance)
-(require 'core-editor)
-(require 'core-key-bindings)
+(org-babel-load-file "~/.emacs.d/core/core-packages.org")
+(org-babel-load-file "~/.emacs.d/core/core-appearance.org")
+(org-babel-load-file "~/.emacs.d/core/core-editor.org")
+(org-babel-load-file "~/.emacs.d/core/core-key-bindings.org")
 
 (message "[Emacs Config] Loading non-core configurations.")
 ;; call specific functionalities relevant for the whole editor
-(require 'completion)
-(require 'projects)
-(require 'startup)
-(require 'terminal)
+(org-babel-load-file "~/.emacs.d/completion/completion.org")
+(org-babel-load-file "~/.emacs.d/projects/projects.org")
+(org-babel-load-file "~/.emacs.d/startup/startup.org")
+(org-babel-load-file "~/.emacs.d/terminal/terminal.org")
 
 (message "[Emacs Config] Loading language configs.")
 ;; call language-specific configurations
-(require 'language-common)
-(require 'language-org)
-(require 'language-latex)
-(require 'language-python)
+(org-babel-load-file "~/.emacs.d/languages/language-common.org")
+(org-babel-load-file "~/.emacs.d/languages/language-org.org")
+(org-babel-load-file "~/.emacs.d/languages/language-latex.org")
+(org-babel-load-file "~/.emacs.d/languages/language-python.org")
 (org-babel-load-file "~/.emacs.d/languages/language-pdf.org")
 
 (message "[Emacs Config] Config is loaded up.")

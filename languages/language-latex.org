@@ -1,3 +1,5 @@
+#+begin_src elisp
+
 (require 'package)
 (setq package-list
       '(auctex-latexmk))
@@ -36,3 +38,6 @@
 (setq lsp-tex-server 'digestif)
 
 (provide 'language-latex)
+
+
+#+end_src

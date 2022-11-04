@@ -11,6 +11,15 @@ projectile.cache
 .lsp-session-*
 ac-comphist.dat
 
+# tangled el files from config
+core/*.el
+completion/*.el
+projects/*.el
+startup/*.el
+projects/*.el
+terminal/*.el
+languages/*.el
+
 # URL directory
 url/
 

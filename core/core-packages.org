@@ -1,0 +1,79 @@
+#+TITLE: Core Packages
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+DATE: Friday November  4, 2022
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+LATEX_HEADER: \usepackage{natbib}
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage{etoolbox} 
+#+LATEX_HEADER: \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+* Core package installations
+
+Define package source, install core packages including =use-package=.
+
+#+begin_src elisp
+(require 'package)
+
+(setq package-list
+      '(use-package
+	projectile
+        undo-tree
+        magit
+        ivy
+        swiper
+        counsel
+        restart-emacs
+	nord-theme
+	exec-path-from-shell
+	counsel-projectile
+	forge
+	eterm-256color
+	vterm
+	tablist
+	pdf-tools
+	balanced-windows
+	yatemplate
+	wakatime-mode))
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+			 ("melpa" . "http://melpa.org/packages/")
+			 ("org" . "http://orgmode.org/elpa/")))
+
+
+
+; activate all the packages (in particular autoloads)
+(package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+#+end_src
+
+
+* PATH variable settings
+
+This sets the PATH used by the emacs config to the PATH of the terminal
+
+#+begin_src elisp
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+#+end_src
+
+* =use-package= settings
+
+#+begin_src elisp
+(require 'use-package)
+(setq use-package-always-ensure t)
+#+end_src
+
+* Provide package
+
+#+begin_src elisp
+(provide 'core-packages)
+#+end_src

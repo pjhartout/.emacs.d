@@ -1,3 +1,5 @@
+#+begin_src elisp
+
 ;; Package configuration for project management
 (require 'use-package)
 
@@ -55,3 +57,6 @@
 
 
 (provide 'projects)
+
+
+#+end_src

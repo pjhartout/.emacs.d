@@ -1,5 +1,3 @@
-;;; languages-pdf.el --- This file handles all of the pdf stuff on emacs  -*- lexical-binding: t; -*-
-
 (use-package pdf-tools
  :config
  ;; initialise
@@ -11,8 +9,6 @@
  ;; use normal isearch
  (define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward))
 
-(pdf-loader-install) ; On demand loading, leads to faster startup time
-
+(pdf-loader-install)
 
 (provide 'language-pdf)
-;;; languages-pdf.el ends here

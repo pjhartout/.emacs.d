@@ -1,3 +1,5 @@
+#+begin_src elisp
+
 ;; Install packages related to appearance
 
 (require 'package)
@@ -96,3 +98,6 @@
   :hook (after-init . global-emojify-mode))
 
 (provide 'core-appearance)
+
+
+#+end_src
