@@ -1,0 +1,10 @@
+#+TITLE: TITLE
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+DATE: `(format-time-string "%A %B %e, %Y")`
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+LATEX_HEADER: \usepackage{natbib}
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage{etoolbox} 
+#+LATEX_HEADER: \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
