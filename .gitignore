@@ -10,6 +10,8 @@ forge-database.sqlite
 projectile.cache
 .lsp-session-*
 ac-comphist.dat
+emojis/
+var/
 
 # tangled el files from config
 core/*.el
