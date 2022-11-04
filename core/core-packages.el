@@ -1,4 +1,3 @@
-;; Define package source
 (require 'package)
 
 (setq package-list
@@ -40,7 +39,6 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-;; This sets the PATH used by the emacs config to the PATH of the terminal
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
