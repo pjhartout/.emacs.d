@@ -1,30 +1,17 @@
-;; Source https://zzamboni.org/post/beautifying-org-mode-in-
-
-;; Org mode appearance
-
-;; use org bullets
-(use-package org-bullets
-  :ensure t)
-
-;; hide emphasis markers
-(setq org-hide-emphasis-markers t)
-(setq org-pretty-entities t)
-
-;; font lock substitutions for unordered lists.
-(font-lock-add-keywords 'org-mode
-                          '(("^ *\\([-]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-
-(require 'use-package)
 (use-package org-bullets
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+(setq org-hide-emphasis-markers t)
 
-;; Visual-line-mode is to enable the text of org documents to reflow.
+(setq org-pretty-entities t)
+
+(font-lock-add-keywords 'org-mode
+                          '(("^ *\\([-]\\) "
+                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
 (add-hook 'org-mode-hook 'visual-line-mode)
 
-;; set faces for theme
 (custom-theme-set-faces
    'user
    '(org-block ((t (:inherit fixed-pitch))))
@@ -40,21 +27,14 @@
    '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
    '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
 
-
-;; Org mode behaviour
-
+(setq tab-width 2)
 (setq org-src-preserve-indentation nil)
 (setq org-edit-src-content-indentation 0)
 
-;; Set refile targets
 (setq org-refile-targets '(("~/Documents/Git/org/gtd.org" :maxlevel . 3)
                            ("~/Documents/Git/org/someday.org" :maxlevel . 3)
                            ("~/Documents/Git/org/today.org" :maxlevel . 3)))
 
-;; Tab behaviour
-(setq tab-width 2)
-
-;; structured templates
 (setq org-structure-template-alist
       '(("a" . "export ascii\n")
         ("b" . "src bibtex")
@@ -69,6 +49,36 @@
         ("s" . "src")
         ("v" . "verse\n")))
 
+(with-eval-after-load 'org
+  ;; This is needed as of Org 9.2
+  (require 'org-tempo)
+
+  (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+  (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+  (add-to-list 'org-structure-template-alist '("py" . "src python")))
+
+(with-eval-after-load 'org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+      '((emacs-lisp . t)
+	(python . t))))
+
+(defun org-execute-code-in-shell  (&optional arg _info)
+  "Copy current src block's contents and execute it in code shell buffer."
+  (interactive "P")
+  (let ((this-window (selected-window))
+	(info (org-babel-get-src-block-info)))
+    (org-babel-switch-to-session arg info)
+    (end-of-buffer)
+    (yank)
+    (comint-send-input)
+    (comint-send-input)
+    (comint-send-input)
+    (select-window this-window)))
+
+(org-defkey org-mode-map "\C-c\C-c" `org-execute-code-in-shell)
+(org-defkey org-mode-map "\C-c\c" 'org-ctrl-c-ctrl-c)
+
 (setq org-todo-keywords
       '((sequence "TODO" "IN-PROGRESS" "WAITING" "VERIFY" "DONE" "CANCELED"
                   "FIXME" "TEMP")))
@@ -78,25 +88,6 @@
 
 (setq org-link-file-path-type 'relative)
 
-;; From Paul, copies and executes the code block in the shell
-;; (defun org-execute-code-in-shell  (&optional arg _info)
-;;   "Copy current src block's contents and execute it in code shell buffer."
-;;   (interactive "P")
-;;   (let ((this-window (selected-window))
-;; 	(info (org-babel-get-src-block-info)))
-;;     (org-babel-switch-to-session arg info)
-;;     (end-of-buffer)
-;;     (yank)
-;;     (comint-send-input)
-;;     (comint-send-input)
-;;     (comint-send-input)
-;;     (select-window this-window)))
-
-;; Rebind keys to org-execute-code-in-shell
-;; (org-defkey org-mode-map "\C-c\C-c" `org-execute-code-in-shell)
-;; (org-defkey org-mode-map "\C-c\c" 'org-ctrl-c-ctrl-c)
-
-;; Org roam setup, from the David Wilson tutorial
 (use-package org-roam
   :ensure t
   :init
@@ -127,13 +118,5 @@
   :config
   (require 'org-roam-dailies) ;; Ensure the keymap is available
   (org-roam-db-autosync-mode))
-
-(with-eval-after-load 'org
-  ;; This is needed as of Org 9.2
-  (require 'org-tempo)
-
-  (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
-  (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
-  (add-to-list 'org-structure-template-alist '("py" . "src python")))
 
 (provide 'language-org)
