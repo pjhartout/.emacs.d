@@ -1,0 +1,16 @@
+#+TITLE: PDB File reading
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+DATE: Monday November 14, 2022
+
+
+
+#+begin_src elisp
+
+(use-package pdb-mode)
+(setq pdb-rasmol-name "/opt/homebrew/bin/pymol")
+(setq auto-mode-alist
+      (cons (cons "pdb$" 'pdb-mode) 
+            auto-mode-alist ) )
+(autoload 'pdb-mode "PDB")
+#+end_src
