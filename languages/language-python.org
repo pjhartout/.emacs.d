@@ -45,7 +45,7 @@
   :bind (:map python-mode-map ("C-c C-b" . blacken-buffer)))
 
 (setq blacken-line-length 79)
-(setq blacken-executable "/Users/philiphartout/.pyenv/shims/black")
+(setq blacken-executable "/Users/phartout/.pyenv/shims/black")
 (add-hook 'python-mode-hook 'blacken-mode 'too-long-lines-mode)
 
 (define-advice org-edit-src-exit (:before (&rest _args) format-python)
