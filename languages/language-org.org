@@ -20,6 +20,12 @@ Show org-mode bullets as UTF-8 characters.
 #+end_src
 
 ** General variables
+*** Image size
+This avoids the system-wide override of image size in org mode.
+#+begin_src elisp
+(setq org-image-actual-width nil)
+#+end_src
+
 *** Hide emphasis markers
 
 #+begin_src elisp

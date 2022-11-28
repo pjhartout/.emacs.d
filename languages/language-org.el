@@ -2,6 +2,8 @@
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+(setq org-image-actual-width nil)
+
 (setq org-hide-emphasis-markers t)
 
 (setq org-pretty-entities t)
