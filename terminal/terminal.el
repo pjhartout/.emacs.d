@@ -1,3 +1,6 @@
+(setq eshell-prompt-function (lambda () "A simple prompt." "λ ")
+      eshell-prompt-regexp    "^λ ")
+
 ;; All kinds of useful terminal related things
 ;; see https://github.com/daviwil/emacs-from-scratch/blob/bbfbc77b3afab0c14149e07d0ab08d275d4ba575/Emacs.org#terminals
 
