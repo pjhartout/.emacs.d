@@ -1,6 +1,34 @@
+* Eshell configuration
+Convert eshell aliases to bash aliases
+
 #+begin_src emacs-lisp
-(setq eshell-prompt-function (lambda () "A simple prompt." "λ ")
-      eshell-prompt-regexp    "^λ ")
+(use-package load-bash-alias
+  :ensure t
+  :defer t
+  :config
+  (setq load-bash-alias-bashrc-file "~/.aliases"))
+#+end_src
+
+Fish-like autosuggestions in eshell
+#+begin_src emacs-lisp
+(use-package esh-autosuggest
+  :ensure t
+  :defer t
+  :hook
+  (eshell-mode . esh-autosuggest-mode))
+#+end_src
+
+#+begin_src emacs-lisp
+(use-package eshell
+  :config
+  ;; Eshell prompt customization
+  (setq eshell-highlight-prompt t)
+  (setq eshell-prompt-regexp "^[^# λ \n]*[# λ ]"
+      eshell-prompt-function (lambda nil
+        (concat
+	 (if (string= (eshell/pwd) (getenv "HOME"))
+	     "~" (eshell/pwd)) 
+	 (if (= (user-uid) 0) "# " " λ ")))))
 #+end_src
 
 #+begin_src elisp
