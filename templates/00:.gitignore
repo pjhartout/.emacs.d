@@ -1,12 +1,4 @@
 ### Custom paths ###
-bibliography/ltximg/
-# Ignore PDF
-bibliography/refs.pdf
-bibliography/refs.tex
-org-roam/ltximg/
-
-lab_book/lab_book.pdf
-lab_book/lab_book.tex
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
