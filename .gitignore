@@ -12,6 +12,7 @@ projectile.cache
 ac-comphist.dat
 emojis/
 var/
+eshell/ # for now
 
 # tangled el files from config
 core/*.el
