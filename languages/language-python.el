@@ -57,3 +57,6 @@
 
 (setq python-indent-guess-indent-offset 4)
 (provide 'language-python)
+
+(use-package anaconda-mode)
+(add-to-list 'python-shell-extra-pythonpaths "/opt/homebrew/Caskroom/miniconda/base/envs/")

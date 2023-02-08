@@ -61,3 +61,8 @@
 (provide 'language-python)
 
 #+end_src
+
+#+begin_src elisp
+(use-package anaconda-mode)
+(add-to-list 'python-shell-extra-pythonpaths "/opt/homebrew/Caskroom/miniconda/base/envs/")
+#+end_src
