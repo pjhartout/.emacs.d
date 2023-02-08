@@ -1,0 +1,4 @@
+#+TITLE: TITLE
+#+AUTHOR: Philip Hartout
+#+EMAIL: <philip.hartout@protonmail.com>
+#+DATE: `(format-time-string "%A %B %e, %Y")`
