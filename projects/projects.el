@@ -1,6 +1,9 @@
 ;; Package configuration for project management
 (require 'use-package)
 
+(use-package sqlite3
+  :ensure t)
+
 ;; Setup Treemacs
 (use-package treemacs
   :config
@@ -10,7 +13,10 @@
           treemacs-display-in-side-window t)
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)))
-	  
+
+;; See link here https://github.com/emacs-lsp/lsp-mode/issues/4054#issuecomment-1558173037 
+(add-to-list 'image-types 'svg)
+
 (use-package treemacs-projectile
   :after (treemacs projectile)
   :ensure t)
