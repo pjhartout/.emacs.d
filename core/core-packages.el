@@ -45,4 +45,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+(setq projectile-mode-line "Projectile")
+
 (provide 'core-packages)

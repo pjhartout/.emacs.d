@@ -50,9 +50,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("5f128efd37c6a87cd4ad8e8b7f2afaba425425524a68133ac0efd87291d05874" default))
- '(package-selected-packages
-   '(emojify lsp-pyright py-isort poetry pyenv-mode blacken smartparens-config doom-themes helpful beacon undo-tree restart-emacs projectile nord-theme magit counsel)))
+   '("4c7228157ba3a48c288ad8ef83c490b94cb29ef01236205e360c2c4db200bb18"
+     "5f128efd37c6a87cd4ad8e8b7f2afaba425425524a68133ac0efd87291d05874"
+     default))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -66,7 +67,7 @@
  '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
  '(org-link ((t (:foreground "royal blue" :underline t))))
  '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
- '(org-property-value ((t (:inherit fixed-pitch))) t)
+ '(org-property-value ((t (:inherit fixed-pitch))))
  '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
  '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))

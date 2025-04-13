@@ -25,10 +25,6 @@
   :hook (dired-mode . treemacs-icons-dired-enable-once)
   :ensure t)
 
-(use-package treemacs-magit
-  :after (treemacs magit)
-  :ensure t)
-
 ;; use treemacs on startup
 (add-hook 'emacs-startup-hook 'treemacs)
 
@@ -50,14 +46,22 @@
     (setq projectile-project-search-path '("~/Documents/Git")))
   (setq projectile-switch-project-action 'projectile-dired ))
 
+
 (use-package counsel-projectile
   :config (counsel-projectile-mode))
 
+;; disable projectile when visiting a remote file
+(defadvice projectile-on (around exlude-tramp activate)
+  "This should disable projectile when visiting a remote file"
+  (unless  (--any? (and it (file-remote-p it))
+                   (list
+                    (buffer-file-name)
+                    list-buffers-directory
+                    default-directory
+                    dired-directory))
+    ad-do-it))
+
 ;; Magit configuration
 (use-package magit)
-
-(use-package forge)
-(setq auth-sources '("~/.authinfo"))
-
 
 (provide 'projects)

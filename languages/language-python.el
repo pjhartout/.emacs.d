@@ -60,3 +60,7 @@
 
 (use-package anaconda-mode)
 (add-to-list 'python-shell-extra-pythonpaths "/opt/homebrew/Caskroom/miniconda/base/envs/")
+
+(use-package reformatter)
+(use-package ruff-format)
+(add-hook 'python-mode-hook 'ruff-format-on-save-mode)
