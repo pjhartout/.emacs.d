@@ -21,7 +21,7 @@
 
 ;; Set the theme
 (use-package doom-themes)
-(load-theme 'doom-palenight t)
+(load-theme 'nord t)
 
 ;; Beacon mode
 (require 'beacon)

@@ -71,7 +71,7 @@ This sets the PATH used by the emacs config to the PATH of the terminal
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-x(setq projectile-mode-line "Projectile")
+(setq projectile-mode-line "Projectile")
 #+end_src
 
 * Provide package
